@@ -1,0 +1,25 @@
+.main_header {
+	border-bottom: 1px solid #ccc;
+	padding: 1rem;
+}
+
+.global_nav {
+	ul, li {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	li {
+		a {
+			display: block;
+			text-decoration: none;
+			padding: .4rem 1rem;
+			font-weight: bold;
+		}
+	}
+}
