@@ -21,6 +21,8 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener'
+
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
@@ -29,7 +31,9 @@ gem 'devise_invitable'
 gem 'jquery-rails'
 gem 'pg'
 gem 'simple_form'
+gem "nested_form"
 group :development do
   gem 'better_errors'
   gem 'rails_layout'
+  gem 'heroku_san'
 end

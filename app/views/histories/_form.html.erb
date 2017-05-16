@@ -1,0 +1,21 @@
+<%= simple_nested_form_for(@history) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :destination %>
+
+    <%= f.fields_for :history_details do |history_detail_form| %>
+      <%= history_detail_form.input :doctor_id, collection: Doctor.order(:id), include_blank: false %>
+      <%= history_detail_form.input :bento_id, collection: Bento.order(:id), include_blank: false %>
+      <%= history_detail_form.input :comment %>
+      <%= history_detail_form.link_to_remove "この行を削除" %>
+    <% end %>
+    <p><%= f.link_to_add "行を追加", :history_details %></p>
+
+  </div>
+
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

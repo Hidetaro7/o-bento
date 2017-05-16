@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bento.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @bento.url %>
+</p>
+
+<%= link_to 'Edit', edit_bento_path(@bento) %> |
+<%= link_to 'Back', bentos_path %>

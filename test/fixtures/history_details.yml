@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  history: one
+  doctor: one
+  bento: one
+  comment: MyText
+
+two:
+  history: two
+  doctor: two
+  bento: two
+  comment: MyText

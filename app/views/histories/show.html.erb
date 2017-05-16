@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @history.user.email %>
+</p>
+
+<p>
+  <strong>History at:</strong>
+  <%= @history.history_at %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @history.destination %>
+</p>
+
+<hr>
+
+<table>
+  <tr>
+    <th>先生</th>
+    <th>弁当</th>
+    <th>弁当URL</th>
+    <th>コメント</th>
+  </tr>
+  <% @history.history_details.each do |history_detail| %>
+  <tr>
+    <td><%= history_detail.doctor.name %></td>
+    <td><%= history_detail.bento.name %></td>
+    <td><%= history_detail.bento.url %></td>
+    <td><%= history_detail.comment %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>
